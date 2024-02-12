@@ -1,0 +1,19 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: comment-service
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eshop
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+  show-sql: true
+eureka:
+  instance:
+    hostname: localhost
