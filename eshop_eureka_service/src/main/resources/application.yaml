@@ -17,3 +17,32 @@ spring:
 eureka:
   instance:
     hostname: localhost
+info:
+  app:
+    name: "this is comment-service"
+    version: "0.0.1"
+    description: "test 3"
+management:
+  endpoint:
+    health:
+      group:
+        custom:
+          include: diskSpace,ping
+          show-components: always
+          show-details: always
+          status:
+            http-mapping:
+              up: 207
+      prometheus:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  info:
+    env:
+      enabled: true
